@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Portfolio - Software Developer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">&lt;/Dev&gt;</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content floating">
+            <h1 class="hero-title">
+                <span class="glitch" data-text="CYBER">CYBER</span>
+                <span class="glitch" data-text="DEVELOPER">DEVELOPER</span>
+            </h1>
+            <p class="hero-subtitle">
+                I am a <span id="typed-text"></span><span class="cursor">|</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about reveal">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate software developer specializing in building exceptional digital experiences. 
+                        With expertise in modern web technologies and a keen eye for design, I create solutions that 
+                        are both functional and visually stunning.
+                    </p>
+                    <div class="skills">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Flask</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">AWS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Featured <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3>AI Chat Platform</h3>
+                            <p>Real-time chat application with AI integration</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>WebSocket</span>
+                                <span>OpenAI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3>E-Commerce Dashboard</h3>
+                            <p>Analytics dashboard with real-time data visualization</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3>Task Automation Suite</h3>
+                            <p>Cloud-based automation tools for business workflows</p>
+                            <div class="project-tags">
+                                <span>Flask</span>
+                                <span>Celery</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <h3>Blockchain Explorer</h3>
+                            <p>Cryptocurrency transaction tracking and analysis</p>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Web3</span>
+                                <span>GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get In <span class="highlight">Touch</span></h2>
+            <form id="contact-form" class="contact-form reveal">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="form-status"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cyber Developer. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
